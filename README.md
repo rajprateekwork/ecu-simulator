@@ -23,6 +23,7 @@ It demonstrates how a tester application communicates with an ECU using diagnost
 ---
 
 ## 🏗️ Project Architecture
+```
 Tester (pytest / CLI)
 ↓
 CAN Interface (python-can virtual bus)
@@ -30,11 +31,12 @@ CAN Interface (python-can virtual bus)
 ECU Simulator (diagnostic logic)
 ↓
 Response sent back over CAN
-
+```
 
 ---
 
 ## 📁 Project Structure
+```
 ecu-simulator/
 │
 ├── ecu/
@@ -52,13 +54,13 @@ ecu-simulator/
 ├── conftest.py # pytest fixture (ECU startup)
 ├── main.py # Integration runner
 └── README.md
-
+```
 
 ---
 
 ## ⚙️ How It Works
 
-### 1. Tester sends request
+1. Tester sends request
 Example:
 ```
 [0x22, 0x01]
@@ -69,9 +71,8 @@ Identifies service ID
 Reads internal simulated data (speed, battery, etc.)
 
 3. ECU sends response
-
-Example:
 ```
+Example:
 [0x62, 0x01, 60]
 ```
 🚀 Supported Diagnostic Services
@@ -88,7 +89,8 @@ Example:
 
 1. Install dependencies
 
-```pip install python-can pytest
+```
+pip install python-can pytest
 ```
 
 2. Run tests
