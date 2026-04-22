@@ -131,4 +131,3 @@ Speed: 60
 - python-can
 - pytest
 - threading (simulation)
-- threading (simulation)
